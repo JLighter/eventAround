@@ -1,14 +1,11 @@
 <ion-view>
     <ion-content>
         <div class="info">
-            <img ng-src="{{event.photo}}"
-                 class=""
-                 alt='Description image'
-                 style="max-height: 200px; margin-top:25px">
-            <div class="page-header">
+            <img ng-src="{{event.photo}}" class="" alt='Description image' style="max-height: 200px; margin-top:25px">
+           <div class="page-header">
                 <h1>{{event.name}} </h1>
-                <h1><small>{{event.timetable | customDate}}</small></h1>
-            </div>
+               <h1><small>{{event.timetable | customDate}}</small></h1>
+           </div>
             <p class="body" ng-if="event.body">{{event.body}}</p>
             <p ng-if="event.detail">{{event.detail}}</p>
             <div class="info-pratique">

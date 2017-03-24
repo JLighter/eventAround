@@ -14,7 +14,7 @@
         $scope.switchView = function (viewType){
           //here I switch the calendar-view
           $scope.calendarView = viewType;
-        };
+        }
 
         //Calendrier Events
         function getEvents() {
@@ -54,7 +54,7 @@
                                     color: eventColor,
                                     actions: [{ // an array of actions that will be displayed next to the event title
                                       label: '', // the label of the action
-                                      cssClass: 'edit-action' // a CSS class that will be added to the action element so you can implement custom styling
+                                      cssClass: 'edit-action', // a CSS class that will be added to the action element so you can implement custom styling
                                     }],
                                     draggable: false, //Allow an event to be dragged and dropped
                                     resizable: false, //Allow an event to be resizable
@@ -72,6 +72,7 @@
                     console.error;
                 });
             }
+            
         }
 
         $ionicModal.fromTemplateUrl('modalContent.html', {
@@ -81,10 +82,11 @@
             $scope.modal = modal;
           });
           $scope.openModal = function(event) {
-
+          console.log(event);
           for (var i = 0; i < IDFData.length; i++) {
               if(i == event.calendarEventId){
                 $scope.currentEvent = IDFData[i].fields;
+                console.log($scope.currentEvent);
                 $scope.event = event;
               }
           }
