@@ -82,11 +82,10 @@
             $scope.modal = modal;
           });
           $scope.openModal = function(event) {
-          console.log(event);
+
           for (var i = 0; i < IDFData.length; i++) {
               if(i == event.calendarEventId){
                 $scope.currentEvent = IDFData[i].fields;
-                console.log($scope.currentEvent);
                 $scope.event = event;
               }
           }
